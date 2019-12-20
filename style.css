@@ -1,0 +1,13 @@
+.Top {
+  width: 100%;
+  display: inline-block;      /* インラインブロック要素にする */
+  background-color: #20A864; 
+  /* 背景色指定 */
+}
+
+.menu-bar {
+  display: flex; 
+  justify-content: right;
+  align-items: right;
+  float: right;
+}

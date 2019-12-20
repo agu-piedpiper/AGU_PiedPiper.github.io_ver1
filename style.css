@@ -1,0 +1,11 @@
+.menu-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: #20A864;
+}
+
+ul > li{
+    display: inline-block;
+}
+    

@@ -1,11 +1,30 @@
+
+
+div.Top{
+    background-color: #20A864;
+    color: #FFFFFF;
+    position: sticky;
+    top: 0;
+    height: 100px;
+    width: 100%;
+}
+
+
+
 .menu-bar{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    background-color: #20A864;
 }
 
-ul > li{
+
+ul li{
     display: inline-block;
+    top: 0;
 }
-    
+
+ul li a{
+    color: #FFFFFF;
+    font: Semibold 40px/55px Open Sans;
+}
+

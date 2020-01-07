@@ -1,15 +1,31 @@
 body {
     color: #fff;
-    margin: 0;
+    margin: 0px;
+}
+
+.container {
+    overflow: auto;
+    scroll-snap-type: y;
+    height: 100vh;
+    margin: 0px;
+
+}
+
+.area {
+    scroll-snap-align: start;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
 }
 
 .hd-main {
 background: green; 
-
+margin: 0px;
 }
 
 .hd-main_left {
 float: left;
+margin: 0px;
 }
 
 .hd-main_menu_item {
@@ -31,12 +47,14 @@ float: left;
 .hd-main_right{
     text-align: right;
     min-width: 70%;
+    margin: 0px;
 }
 
 .hd-main_submenu {
     display: inline-block;
     list-style: none;
     text-align: right;
+    margin: 0px;
 }
 .hd-main_submenu_item{
     position: relative;
@@ -53,23 +71,23 @@ float: left;
     align-items: center;
     background: linear-gradient(90deg,hsl(251, 60%, 47%) 0%,#a8c0ff 100%);
     height: 100vh;
-    
+    margin: 0px;
 }
 
 .about {
-
     background-color: black;
     height: 100vh;
+    margin: 0px;
 }
 
 .activity {
-
     background: linear-gradient(to bottom, #348f50, #56b4d3);
     height: 100vh;
+    margin: 0px;
 }
 
 .join-us {
-
     background: linear-gradient(90deg,hsl(251, 60%, 47%) 0%,#a8c0ff 100%);
     height: 100vh;
+    margin: 0px;
 }

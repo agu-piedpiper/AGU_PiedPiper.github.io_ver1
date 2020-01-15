@@ -2,70 +2,88 @@
 <html>
   <head>
     <title>青学PiedPiperプログラミング</title>
-    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+    <meta http-equiv="content-language" content="ja">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="style.css" >
   </head>
+
+
   <body>
-    <div class="Top">
-    <h1>
-      <a><img src="">PiedPiper</img></a>
-      <div class="menu-bar">
-        <ul>
+    <div class="header">
+      <a class="header__title" href="index.html"><img src="assets/piedpiperwhite3.png" alt="PiedPiper" width="160" height="40"></a>
+      <div class="header__menu">
+        <ul class="header__menu__pc">
           <li><a href="#about">ABOUT</a></li>
           <li><a href="#joinus">JOIN US</a></li>
           <li><a href="#activity">ACTIVITY</a></li>
           <li><a href="#contact">CONTACT</a></li>
         </ul>
+
+        <ul>
+          <input type="checkbox" id="input">
+            <label for="input">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </label>
+            <!-- <div id="content">
+              <li id="about"><a href="#about">ABOUT</a></li>
+              <li id="joinus"><a href="#joinus">JOIN US</a></li>
+              <li id="activity"><a href="#activity">ACTIVITY</a></li>
+              <li id="contact"><a href="#contact">CONTACT</a></li>
+            </div> -->
+        </ul> 
         </div>
-    </h1>
     </div>
-    <hr color="green">
 
-  <div class="top-logo">
-    <p>PiedPiper</p>
-    <p>Aoyama Gakuin University</p>
-    <p>Programming Society</p>
-  </div>
+  <div class="section">
+    <div class="section__top">
+      <div class="section__top__logo">
+        <img src="assets/circle__logo1.png" alt="" height="" width="20%">
+      </div>
+      <p>PiedPiper</p>
+      <p>Aoyama Gakuin University</p>
+      <p>Programming Society</p>
+    </div>
 
-  <div>
-    scroll
-  </div>
+    <div class="section__about">
+      <h3>ABOUT</h3>
+      <p>青山学院大学プログラミング愛好会です</p>
+      <p>青学生のテクノロジーへの理解を深め</p>
+      <p>プログラミングの学習及び開発を行なっています</p>
+    </div>
+    <div class="section__activity">
+      <h3>ACTIVITY</h3>
+      <!-- ここでnote API導入 -->
+      <!-- more+ -->
+    </div>
+    <div class="section__joinus">
+      <h3>JOIN US</h3>
+      <p>PiedPiperは</p>
+      <p>初心者歓迎のサークルです</p>
 
-  <div class="about">
-    <h3>ABOUT</h3>
-    <p>青山学院大学プログラミング愛好会です</p>
-    <p>青学生のテクノロジーへの理解を深め</p>
-    <p>プログラミングの学習及び開発を行なっています</p>
-  </div>
-  <div class="activity">
-    <h3>ACTIVITY</h3>
-    <!-- ここでnote API導入 -->
-    <!-- more+ -->
-  </div>
-  <div class="joinus">
-    <h3>JOIN US</h3>
-    <p>PiedPiperは</p>
-    <p>初心者歓迎のサークルです</p>
+      <p>エンジニア志望の方は勿論、</p>
 
-    <p>エンジニア志望の方は勿論、</p>
+      <p>起業・教育関係のお仕事を目指す方</p>
+      <p>ものづくりが好きな方</p>
+      <p>新しい時代を感じたい方</p>
 
-    <p>起業・教育関係のお仕事を目指す方</p>
-    <p>ものづくりが好きな方</p>
-    <p>新しい時代を感じたい方</p>
+      <p>是非一度ご連絡ください</p>
+      <p>お待ちしています</p>
+      <!-- ツイッターへ -->
+    </div>
+    <div class="section__contact">
+      <form action="malto: piedpiper.aoyama@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name"><br>
+        <input type="text" name="email" placeholder="Email Address"><br>
+        <textarea name="comment" id="contact" cols="30" rows="10" placeholder="Message"></textarea><br>
+        <input type="submit" value="SEND">
+      </form>
+    </div>
+</div>
 
-    <p>是非一度ご連絡ください</p>
-    <p>お待ちしています</p>
-    <!-- ツイッターへ -->
-  </div>
-  <div class="contact">
-    <form action="#" method="post">
-      <input type="text" name="name" placeholder="Your Name"><br>
-      <input type="text" name="email" placeholder="Email Address"><br>
-      <textarea name="comment" id="contact" cols="30" rows="10" placeholder="Message"></textarea><br>
-      <input type="submit" value="SEND">
-    </form>
-  </div>
-
-  <div id="copyright">
+  <div class="copyright">
     <p>©2019青山学院大学PiedPiperプログラミング愛好会</p>
     <!-- Noteへ -->
     <!-- ツイッターへ -->

@@ -10,8 +10,12 @@
 
 
   <body>
-    <div class="header">
+    <!-- ヘッダー -->
+    <header>
+      <!-- ヘッダーのタイトル（indexとの結び付） -->
       <a class="header__title" href="index.html"><img src="assets/piedpiperwhite3.png" alt="PiedPiper" width="160" height="40"></a>
+      <!-- ヘッダーのメニューバー -->
+      <!-- パソコン表示のメニューバー -->
       <div class="header__menu">
         <ul class="header__menu__pc">
           <li><a href="#about">ABOUT</a></li>
@@ -27,67 +31,112 @@
               <div class="line"></div>
               <div class="line"></div>
             </label>
-            <!-- <div id="content">
-              <li id="about"><a href="#about">ABOUT</a></li>
-              <li id="joinus"><a href="#joinus">JOIN US</a></li>
-              <li id="activity"><a href="#activity">ACTIVITY</a></li>
-              <li id="contact"><a href="#contact">CONTACT</a></li>
-            </div> -->
+            
         </ul> 
         </div>
-    </div>
+    </header>
+    <!-- ここまでがヘッダー -->
 
-  <div class="section">
-    <div class="section__top">
-      <div class="section__top__logo">
-        <img src="assets/circle__logo1.png" alt="" height="" width="20%">
+    <main>
+      <!-- セクション1 TOP-->
+      <div class="section__top">
+        <!-- セクション1 TOPのロゴ -->
+        <div class="section__top__logo">
+          <img src="assets/circle__logo1.png" alt="" height="" width="20%">
+        </div>
+        <!-- TOPの文章 -->
+        <div class="section__top__text">
+          <h1>PiedPiper</h1>
+          <p>Aoyama Gakuin University</p>
+          <p>Programming Society</p>
+        </div>
+
+        
       </div>
-      <p>PiedPiper</p>
-      <p>Aoyama Gakuin University</p>
-      <p>Programming Society</p>
+
+      <!-- セクション2-ABOUT_PIEDPIPER -->
+      <div id="about" class="section__about">
+        <!-- ABOUTの文章 -->
+        <div class="section__about__text">
+          <h1>ABOUT</h1>
+          <h1>PiedPiper</h1>
+          <p>青山学院大学プログラミング愛好会です</p>
+          <p>青学生のテクノロジーへの理解を深め</p>
+          <p>プログラミングの学習及び開発を行っています</p>
+        </div>
+      </div>
+
+
+      <!-- セクション3 -ACTIVITY-->
+      <div id="activity" class="section__activity">
+        <h1>ACTIVITY</h1>
+        <!-- ここでnote API導入 -->
+        <!-- more+ -->
+      </div>
+
+
+      <!-- セクション4 -JOIN_US-->
+      <div id="joinus" class="section__joinus">
+        <div class="section__joinus__message">
+          <h1>JOIN US</h1>
+          <p>PiedPiperは</p>
+          <p>初心者歓迎のサークルです</p>
+          <p>エンジニア志望の方は勿論、</p>
+          <p>起業・教育関係のお仕事を目指す方</p>
+          <p>ものづくりが好きな方</p>
+          <p>新しい時代を感じたい方</p>
+          <p>是非一度ご連絡ください</p>
+          <p>お待ちしています</p>
+        </div>
+        <div class="section__joinus__aoyama">
+          <h5>Aoyama Campus</h5>
+          <p>Every Friday</p>
+          <p>18:30~21:00
+        </div>
+        <div class="section__joinus__sagamihara">
+          <h5>Sagamihara Camups</h5>
+          <p> Every Monday</p>
+          <p>18:00~21:00</p>
+          
+        </div>
+      </div>
+
+
+
+      <!-- セクション5-CONTACT -->
+      <div class="section__contact">
+      
+        <div class="section__contact__list">
+          <h2>PiedPiper</h2>
+          <p>Aoyama Gakuin University</p> 
+          <p>Programming Society</p>
+          <p>piedpiper.aoyama@gmail.com</p>
+          <p><a href="https://twitter.com/PiedPiper_AGU">Twitter</a></p>
+          <p><a href="https://note.com/piedpiper_aoyama/n/ne40b6a301258">Note</a></p>
+          <p><a href="#">Instagram</a></p>
+          <p><a href="#">Facebook</a></p>
+        </div>
+
+
+
+        <div class="section__contact__form">
+          <form action="malto: piedpiper.aoyama@gmail.com" method="post" enctype="text/plain">
+            <input type="text" size="32" name="name" placeholder="Your Name"><br>
+            <input type="text" size="32" name="email" placeholder="Email Address"><br>
+            <textarea name="comment" id="contact" cols="30" rows="10" placeholder="Message"></textarea><br>
+            <input type="submit" value="SEND" class="button">
+          </form>
+        </div>
+      </div>
+
+     </main>
     </div>
 
-    <div class="section__about">
-      <h3>ABOUT</h3>
-      <p>青山学院大学プログラミング愛好会です</p>
-      <p>青学生のテクノロジーへの理解を深め</p>
-      <p>プログラミングの学習及び開発を行なっています</p>
-    </div>
-    <div class="section__activity">
-      <h3>ACTIVITY</h3>
-      <!-- ここでnote API導入 -->
-      <!-- more+ -->
-    </div>
-    <div class="section__joinus">
-      <h3>JOIN US</h3>
-      <p>PiedPiperは</p>
-      <p>初心者歓迎のサークルです</p>
-
-      <p>エンジニア志望の方は勿論、</p>
-
-      <p>起業・教育関係のお仕事を目指す方</p>
-      <p>ものづくりが好きな方</p>
-      <p>新しい時代を感じたい方</p>
-
-      <p>是非一度ご連絡ください</p>
-      <p>お待ちしています</p>
-      <!-- ツイッターへ -->
-    </div>
-    <div class="section__contact">
-      <form action="malto: piedpiper.aoyama@gmail.com" method="post" enctype="text/plain">
-        <input type="text" name="name" placeholder="Your Name"><br>
-        <input type="text" name="email" placeholder="Email Address"><br>
-        <textarea name="comment" id="contact" cols="30" rows="10" placeholder="Message"></textarea><br>
-        <input type="submit" value="SEND">
-      </form>
-    </div>
-</div>
-
-  <div class="copyright">
-    <p>©2019青山学院大学PiedPiperプログラミング愛好会</p>
-    <!-- Noteへ -->
-    <!-- ツイッターへ -->
-  </div>
+      <footer>
+        <p>©2020青山学院大学PiedPiperプログラミング愛好会</p>
+        <!-- Noteへ -->
+        <!-- ツイッターへ -->
+      </footer>
 
   </body>
 </html>

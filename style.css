@@ -1,18 +1,21 @@
 body{
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-bottom: 0px;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-bottom: 0%;
   }
+  @media screen and (max-width:767px){
+    .header__menu__pc{display: none;}
+  }
+  
   header{
-    background: #159957;  /* fallback for old browsers */
+    /* background: #159957;  fallback for old browsers */
     background: -webkit-linear-gradient(to right, #159957, #155799);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #159957, #155799); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    border-bottom: 0px solid black;
-    /* ヘッダー内、要素の横並び */
+  
     display: flex;
     flex-direction: row;
-    /* justify-content: center; */
-    align-items: center;
+    
+    
     /* ポジションの基準化 */
     position: relative;
     /* ヘッダー固定化 */
@@ -21,20 +24,21 @@ body{
     height: 60px;
     /* 上の空白問題解消 */
     top: 0;
-    left: 0;
+    
   }
   .header__title {
     /* vertical-align: middle; */
-    padding-left: 20px;
-    position: absolute;
-    top: 12px;
-  }
-  /* .header h1:before{
-    content:url(assets/piedpiper.jpg);
-  } */
-  /* .header__title, .header__menu{
     display: inline-block;
-  } */
+    
+    /* padding-left: 5%; */
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit- transform: translateY(-50%) translateX(-50%);
+    
+  }
+ 
   .header__menu{
     position: absolute;
     right: 0.5%;
@@ -47,7 +51,7 @@ body{
     /* position: absolute; */
   }
   .header__menu li{
-    margin-right: 30px;
+    margin-left: 5%;
     list-style: none;
   }
   .header__menu a{
@@ -64,7 +68,7 @@ body{
     background-color: white;
     margin: 6px;
   }
-  @media screen and (max-width:768px){
+  @media screen and (max-width:767px){
     .header__menu__pc{display: none;}
   }
   
@@ -75,7 +79,12 @@ body{
   /* ーーーーーここからMAINーーーーー */
   
   main{
-    margin-top: 90px;
+    margin-top: 60px;
+    margin-left: 0%;
+    margin-right: 0%;
+    /* スマホのレスポンシブ対応 */
+    overflow: hidden;
+    
   }
   
   .section__top{
@@ -85,10 +94,10 @@ body{
 
     /* background-image: url(assets/pptop.png); */
     /* background-size: cover; */
-    height:400px;
+    height: 30%;
     padding-top: 10%;
     padding-bottom: 10%;
-    /* width: 100%; */
+    width: 100%; 
     /* margin: 0 auto; */
     /* margin-left: 0px; */
   }
@@ -105,42 +114,66 @@ body{
   .section__about{
     background-color: #424242;
     /* background-image: url(assets/aboutwall.png); */
-    background-size: cover;
+    /* background-size: cover; */
     height: 400px;
     /* max-width: 100%; */
+    padding-bottom: 10%;
+    padding-top: 10%;
   }
-  .section__about__text{
+  .section__about__text {
     text-align: center;
     color: white;
+  }
+  .section__about__text p{
+    font-size: 90%;
   }
   .section__activity{
     /* background-color: #00796b; */
     background: #159957;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #155799, #159957);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    height: 400px;
+    height: 60%;
+    width: 100%;
     color: white;
     text-align: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+  .section__activity__articles{
+    
+    text-align: center;
+  }
+  .section__activity__articles__each{
+    display: inline-block;
+   
+    border-style: solid;
+    width: 210px;
+    height: 150px;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+
   }
   .section__joinus{
     background-color: #e0e0e0;
     text-align: center;
     display: flex;  
-    height: 400px;
+    /* display: inline-block; */
+    height: 80;
   }
   .section__joinus__message{
     background-color: #00796b;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5%;
-    margin-bottom: 20%;
+    
     font-size: 20%;
     color: white;
     text-align: left;
-    width: 30%;
+    width: 200px;
     height: 80%;
     padding-left: 5%;
     padding-right: 5%;
+  }
+  .section__joinus__campusinfo{
+    display: flex;
   }
   .section__joinus__aoyama{
     background-color: #00796b;
@@ -148,16 +181,18 @@ body{
     margin-right: auto;
     color: white;
     height: 40%;
-    width: 20%;
+    width: 200px;
     margin-top: 10%;
+    font-size: 20%;
+    padding-left: 10%, 10%, 10%, 10%;
   }
   .section__joinus__sagamihara{
     background-color: #00796b;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 5%;
+    margin-right: 5%;
     color: white;
     height: 40%;
-    width: 20%;
+    width: 200px;
     margin-top: 20%;
   }
   
@@ -170,11 +205,12 @@ body{
     color: white;
     text-align: center;
     display: flex;
-    height: 400px;
+    /* flex-direction: column; */
+    height: 80%;
   }
  .section__contact__list{
-   margin-right: auto;
-   margin-left: auto;
+   /* margin-right: auto;
+   margin-left: auto; */
    text-align: left;
  }
  .section__contact__list a{
@@ -183,12 +219,19 @@ body{
  }
  .section__contact__form{
    margin-top: 10%;
-   margin-right: auto;
-   margin-left: auto;
+   /* margin-right: auto;
+   margin-left: auto; */
    text-align: left;
    text-align: center;
    /* height: 400px; */
  }
+
+ @media screen and (max-width: 767px) {
+  .section__contact {
+    flex-direction: column;
+  }
+ }
+
  .button {
   display       : inline-block;
   border-radius : 5%;          /* 角丸       */
@@ -208,12 +251,17 @@ body{
   color         : #159957;     /* 背景色     */
   background    : #ffffff;     /* 文字色     */
 }
-  /* .section__contact__list .section__contact__form{
-    display: inline-block;
-  } */
+ 
+  /* @media screen and (max-width: 767px) {
+    .section__contact {
+      flex-direction: column;
+    }
+   } */
+
+
   footer{
     background-color: #212121;
-    height: 70px;
+    padding-top: 20px;
     color: white;
   }
   /* .header__menu li{

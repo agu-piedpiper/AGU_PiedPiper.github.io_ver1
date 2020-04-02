@@ -9,11 +9,18 @@ def hello_world():
 
     note = Note()
     note_deta = note.get_deta()
-    # note_name = note_deta["name"]
-    # note_body = note_deta["body"][0:150]
-    # note_eyecatch = note_deta["eyecatch"]
-    # note_publish_at = note_deta["publish_at"]
+
     return render_template('test.html',note_deta=note_deta)
+
+
+@app.route('/note/<req_id>',methods=['POST', 'GET'])
+def get_note(req_id):
+    id= request.args.get('q')
+    note = Note()
+    note_deta = note.get_deta()
+    note_body = note_deta
+
+    return render_template('note_body.html', id=id) 
 
 
 if __name__ == '__main__':

@@ -1,43 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% block content %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-</head>
-
-<body>
+<div class="note-conteiner">
     <h1 class="text-center">Note of PiedPiper</h1>
-    <p>{{ message }}</p>
-    <div class="m-5">
-        <div class="row  p-5">
-            {% for note in note_deta %}
-            <div class="col-xl-4 col-4  px-1">
-                <div class="card shadow mb-4" style="width: 18rem;">
-                    <img class="card-img-top" src="{{note['eyecatch']}}" alt="カードの画像">
-                    <div class="card-body">
-                        <h5 class="card-title">{{note['name']}}</h5>
-                        <p class="card-text">{{note['publish_at'][0:16]}}<br>{{note['body'][0:150]}}</p>
-                        <br>{{note['id']}}</p>
-                        <a href="#" class="btn btn-primary">ボタン</a>
-                    </div>
-                </div>
+    <div class="row justify-content-center">
+        <div class="note-content col-6">
+            <div class="note-title">
+                <img src="{{eyecatch}}" alt="">
+                <h1>{{ name }}<br>
+                    <span class="small text-muted">{{publish_at[0:10]}}</span></h1>
             </div>
-            {% endfor %}
+
+            <div class="note-body">
+                {{ body |safe }}
+            </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-</body>
+</div>
 
-</html>
+
+
+
+</div>
+
+{% endblock %}

@@ -15,13 +15,14 @@ body {
     width: 100%;
 }
 
-a{
+a {
     color: #ffffff;
 }
 
-a:hover{
+a:hover {
     color: #e7e7e7;
 }
+
 body::-webkit-scrollbar {
     display: none;
 }
@@ -34,18 +35,17 @@ body::-webkit-scrollbar {
 
 .main {
     scroll-snap-type: y mandatory;
-
 }
 
 /*　　　header
 ーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
 
 header {
-    /* background: #159957;  fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #00944b, #0061a4);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #00944b, #0061a4);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* background: -webkit-linear-gradient(to right, #00944b, #0061a4);
+
+    background: linear-gradient(to right, #00944b, #0061a4); */
+    backdrop-filter: blur(3px);
+    background: none;
     height: 7vh;
 }
 
@@ -144,7 +144,7 @@ hd-logo>h1 {
 ーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
 
 footer {
-    background-color: #212121;
+    background-color: #252525;
     text-align: center;
     padding-top: 10px;
     height: 10vh;
@@ -162,7 +162,7 @@ footer {
     transform: translateX(-50%);
     font-size: 4rem;
     margin-bottom: 2%;
-    margin-top: 1%;
+    margin-top: 0%;
     font-weight: 600;
 }
 
@@ -178,7 +178,6 @@ footer {
     transform: translateX(-50%);
     background-color: #fff;
     border-radius: 1px;
-
 }
 
 .section {
@@ -186,16 +185,17 @@ footer {
     padding: 5%;
     scroll-snap-align: start;
 }
-.note-list{
+
+.note-list {
     padding-left: 5%;
     padding-right: 5%;
 }
-.card{
+
+.card {
     border: none;
 }
 
 /* note */
-
 
 .note-list-heading {
     display: inline-block;
@@ -207,7 +207,7 @@ footer {
     margin-bottom: 2%;
     margin-top: 1%;
     font-weight: 600;
-    color: #000;
+    color: #252525;
 }
 
 .note-list-heading:before {
@@ -220,29 +220,28 @@ footer {
     height: 3px;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-    background-color: #000;
+    background-color: #252525;
     border-radius: 1px;
-
 }
-
 
 /* note-body */
-.note-conteiner{
+
+.note-conteiner {
     padding-left: 5%;
     padding-right: 5%;
-
-}
-.note-content{
-    color: #000;
-
 }
 
-.note-title h1{
+.note-content {
+    color: #252525;
+}
+
+.note-title h1 {
     font-weight: 600;
     margin-top: 50px;
     margin-bottom: 50px;
 }
-.note-body{
+
+.note-body {
     font-size: 18px;
 }
 
@@ -251,20 +250,21 @@ footer {
     margin-bottom: 36px;
 }
 
-.note-content img{
+.note-content img {
     width: 100% !important;
-    height: 100%  !important;
-   }
+    height: 100% !important;
+}
 
 /*　　　Top
 ーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
 
 #top {
     background: #159957;
-    background: -webkit-linear-gradient(to right, #00944b, #0061a4);
-    background: linear-gradient(to right, #00944b, #0061a4);
-    ;
+    background: -webkit-linear-gradient(to right bottom, #00944b, #0061a4);
+    background: linear-gradient(to right bottom, #00944b, #0061a4);
     position: relative;
+    height: 100vh;
+    width: 100%;
 }
 
 .section__top__logo {
@@ -287,11 +287,46 @@ footer {
     font-weight: 600;
 }
 
+.bg-img {
+    background-image: url("/static/images/bg.png");
+    height: 100%;
+    width: 100%;
+}
+
+.scroll {
+    position: absolute;
+    display: inline-block;
+    height: 84px;
+    bottom: 5px;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
+}
+
+.scroll>a {
+    padding-top: 30px;
+    text-decoration: none;
+}
+
+.scroll>a>span {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    box-sizing: border-box;
+}
+
 /*　　　About
 ーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
 
 #about {
-    background-color: #424242;
+    background-color: #252525;
     display: block;
 }
 
@@ -299,6 +334,17 @@ footer {
     padding-top: 1%;
     padding-right: 23%;
     font-size: 1rem;
+    margin-left: 1.5%;
+}
+
+.display-1 {
+    font-size: 120px;
+    font-weight: 700;
+}
+
+.about-conteinar {
+    margin-top: 10%;
+    margin-bottom: 2%;
 }
 
 /*　　　Activity
@@ -329,16 +375,17 @@ footer {
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
     opacity: 0.6;
     text-decoration: none;
+    backdrop-filter: blur(3px);
 }
 
 /*　　　Join Us
 ーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
 
 #joinus {
-    background-color: greenyellow;
+    background-color: #252525;
 }
 
-.section__joinus__message {
+/* .section__joinus__message {
     background-color: greenyellow;
 }
 
@@ -348,7 +395,7 @@ footer {
 
 .section__joinus__sagamihara {
     background-color: greenyellow;
-}
+} */
 
 /*　　　Contact
 ーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
@@ -361,4 +408,8 @@ footer {
 
 .contact-body {
     padding: 2%;
+}
+
+.contact-body h1 {
+    font-weight: 600;
 }

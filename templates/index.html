@@ -4,32 +4,40 @@
 
 <!-- セクション1 TOP-->
 
-<div id="top" class="section__top section">
-  <!-- セクション1 TOPのロゴ -->
-  <div class="top-container">
-    <div class="section__top__logo">
-      <img src="/static/images/logo_w.png" alt="logo" width="30%">
+<div id="top" class="section__top ">
+  <div class="bg-img section">
+    <!-- セクション1 TOPのロゴ -->
+    <div class="top-container">
+      <div class="section__top__logo">
+        <img src="/static/images/logo_w.png" alt="logo" width="30%">
+      </div>
+      <!-- TOPの文章 -->
+      <div class="section__top__text">
+        <p class="h1 display-3 mt-4 mb-3 top_logo_text">PiedPiper</p>
+        <p class="h5">Aoyama Gakuin University</p>
+        <p class="h5">Programming Society</p>
+      </div>
     </div>
-    <!-- TOPの文章 -->
-    <div class="section__top__text">
-      <p class="h1 display-3 mt-4 mb-3 top_logo_text">PiedPiper</p>
-      <p class="h5">Aoyama Gakuin University</p>
-      <p class="h5">Programming Society</p>
+    <div class="scroll ">
+      <a href="#about"><span></span>Scroll</a>
     </div>
   </div>
-
 </div>
+
 
 <!-- セクション2-ABOUT_PIEDPIPER -->
 <div id="about" class="section__about section">
-  <!-- ABOUTの文章 -->
-  <h1 class="display-1">PiedPiper</h1>
-  <div class="about__text">
-    <p>青山学院大学プログラミング愛好会です。</p>
-    <p>青学生のテクノロジーへの理解を深め</p>
-    <p>プログラミングの学習及び開発を行っています。</p>
+  <div class="row">
+    <div class="about-conteinar col-10 offset-2">
+      <h1 class="display-1">PiedPiper</h1>
+      <div class="about__text">
+        <p>青山学院大学プログラミング愛好会です。</p>
+        <p>青学生のテクノロジーへの理解を深め</p>
+        <p>プログラミングの学習及び開発を行っています。</p>
+      </div>
+    </div>
   </div>
-
+  <!-- ABOUTの文章 -->
 </div>
 
 
@@ -42,7 +50,7 @@
       <div class="col-xl-3 col-4  px-3">
         <div class="card mb-4 ">
           <a href="note/{{note['id']}}" class="note-card">
-            <img class="card-img-top" src="{{note['eyecatch']}}" alt="カードの画像">
+            <img class="card-img-top " src="{{note['eyecatch']}}" alt="カードの画像">
             <div class="card-body p-4">
               <h5 class="card-title">{{note['name']}}<br><span
                   class="small text-muted">{{note['publish_at'][0:10]}}</span></h5>
@@ -51,54 +59,64 @@
             </div>
           </a>
         </div>
-
       </div>
       {% endfor %}
-
     </div>
     <div class="button_wrapper">
       <a href="/note" class="more-button">More</a>
     </div>
-
   </div>
-
 </div>
 
 
 <!-- セクション4 -JOIN_US-->
 <div id="joinus" class="section__joinus section">
-  <div class="section__joinus__message">
-    <h1>JOIN US</h1>
-    <p>PiedPiperは</p>
-    <p>初心者歓迎のサークルです</p>
-    <p>エンジニア志望の方は勿論、</p>
-    <p>起業・教育関係のお仕事を目指す方</p>
-    <p>ものづくりが好きな方</p>
-    <p>新しい時代を感じたい方</p>
-    <p>是非一度ご連絡ください</p>
-    <p>お待ちしています。</p>
-  </div>
-  <div class="section__joinus__aoyama">
-    <h5>Aoyama Campus</h5>
-    <p>Every Friday</p>
-    <p>18:30~21:00
-  </div>
-  <div class="section__joinus__sagamihara">
-    <h5>Sagamihara Camups</h5>
-    <p> Every Monday</p>
-    <p>18:00~21:00</p>
-  </div>
-</div>
+  <div class="section__joinus__message ">
+    <h1 class="sub-heading">JOIN US</h1>
+    <div class="row justify-content-center contact-body">
+      <div class="col-3">
+        <p>PiedPiperは</p>
+        <p>初心者歓迎のサークルです</p>
+        <p>エンジニア志望の方は勿論、</p>
+        <p>起業・教育関係のお仕事を目指す方</p>
+        <p>ものづくりが好きな方</p>
+        <p>新しい時代を感じたい方</p>
+        <p>是非一度ご連絡ください</p>
+        <p>お待ちしています。</p>
+      </div>
+      <div class="col-2 offset-1">
+        <div class="section__joinus__aoyama">
+          <img src="/static/images/image-empty.png" width="100%" alt="">
+          <h5>Aoyama Campus</h5>
+          <p>Every Friday</p>
+          <p>18:30~21:00
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="section__joinus__sagamihara">
+          <img src="/static/images/image-empty.png" width="100%" alt="">
+          <h5>Sagamihara Camups</h5>
+          <p> Every Monday</p>
+          <p>18:00~21:00</p>
+        </div>
+      </div>
+    </div>
+    <div class="">
+      <img src="/static/images/logo_symbol.png" width="10%" alt="">
+      <img src="/static/images/Twitter_Logo.png" width="10%" alt="">
+    </div>
 
+  </div>
+
+</div>
 
 
 <!-- セクション5-CONTACT -->
 <div id="contact" class="section__contact section">
   <h1 class="sub-heading">CONTACT</h1>
-
   <div class="row justify-content-center contact-body">
-    <div class="t col-3 text-left ">
-      <h2>PiedPiper</h2>
+    <div class=" col-3 text-left ">
+      <h1>PiedPiper</h1>
       <p>Aoyama Gakuin University<br>
         Programming Society</p>
       <p>piedpiper.aoyama@gmail.com</p>
@@ -107,8 +125,6 @@
       <p><a href="#">Instagram</a></p>
       <p><a href="#">Facebook</a></p>
     </div>
-
-
 
     <div class="section__contact__form col-3 offset-2">
       <form action="malto: piedpiper.aoyama@gmail.com" method="post" enctype="text/plain">
@@ -124,15 +140,10 @@
         <div class="button_wrapper">
           <input type="submit" value="SEND" class="button">
         </div>
-
       </form>
     </div>
   </div>
-
 </div>
-
-
-
 
 <footer>
   <p><small>&copy;2020青山学院大学PiedPiperプログラミング愛好会</small></p>

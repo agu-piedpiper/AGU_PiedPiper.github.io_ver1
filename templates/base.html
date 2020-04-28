@@ -14,19 +14,30 @@
     <link rel="stylesheet" href="/static/style.css">
 </head>
 
-<body data-spy="scroll" data-target="#aaa" data-offset="20">
+<body data-spy="scroll" data-target="#nav" data-offset="20">
     <nav class="navbar">
         <!-- ヘッダーのタイトル（indexとの結び付） -->
         <!-- <a href="/" class="navbar-brand"><img class="d-inline-block align-top logo-img"
                 src="/static/images/PiedPiper_logo_w.png" alt="PiedPiper"></a> -->
         <!-- ヘッダーのメニューバー -->
-        <div id="aaa">
+        <div id="nav">
             <ul class="nav nav-pills flex-column ml-auto">
+                {% if index %}
                 <li class="nav-item"><a class="nav-link" href="#top">PiedPiper</a></li>
                 <li class="nav-item"><a class="nav-link " href="#about">About</a></li>
                 <li class="nav-item"><a class="nav-link " href="#activity">Activity</a></li>
                 <li class="nav-item"><a class="nav-link " href="#joinus">Join Us</a></li>
                 <li class="nav-item"><a class="nav-link " href="#contact">Contact</a></li>
+                {%else%}
+                <li class="nav-item"><a class="nav-link" href="/#top">PiedPiper</a></li>
+                <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="/#activity">Activity</a></li>
+                <li class="nav-item"><a class="nav-link" href="/#joinus">Join Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="/#contact">Contact</a></li>
+                {{ style | safe }}
+                {% endif %}
+
+
             </ul>
         </div>
 
@@ -41,7 +52,7 @@
         {% endblock %}
     </div>
     <footer>
-        <p><small>&copy;2020青山学院大学PiedPiperプログラミング愛好会</small></p>
+        <p class="small">&copy;2020青山学院大学PiedPiperプログラミング愛好会</p>
         <!-- Noteへ -->
         <!-- ツイッターへ -->
     </footer>

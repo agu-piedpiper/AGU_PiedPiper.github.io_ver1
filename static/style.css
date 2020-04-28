@@ -60,7 +60,7 @@ body::-webkit-scrollbar {
     padding: 0;
 }
 
-.aaa, .nav, .nav-item {
+.nav, .nav, .nav-item {
     display: -webkit-flex;
     display: flex;
 }
@@ -116,7 +116,7 @@ hd-logo>h1 {
     font-size: 160%;
 }
 
-.main-nav {
+/* .main-nav {
     display: flex;
     font-size: 1.25rem;
     text-transform: uppercase;
@@ -134,7 +134,7 @@ hd-logo>h1 {
 
 .main-nav a:hover {
     color: #00bbdd;
-}
+} */
 
 .page-header {
     display: flex;
@@ -204,9 +204,13 @@ hd-logo>h1 {
 footer {
     background-color: #252525;
     text-align: center;
-    padding-top: 10px;
     height: 10vh;
     color: white;
+}
+
+footer p {
+    line-height: 10vh;
+    margin: 0;
 }
 
 /*　　　共通
@@ -267,7 +271,7 @@ footer {
 .note-title h1 {
     font-weight: 600;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 5px;
 }
 
 .note-body {
@@ -414,6 +418,14 @@ footer {
     background-color: #252525;
 }
 
+.activity_location {
+    margin-top: 5px;
+}
+
+.activity_location>p {
+    margin-bottom: 5px;
+}
+
 .how_to_join {
     margin-top: 50px;
     text-align: center;
@@ -478,4 +490,9 @@ footer {
     transform: translateX(-50%);
     background-color: #fff;
     border-radius: 1px;
+}
+
+.note-body a {
+    color: #252525;
+    text-decoration: underline;
 }

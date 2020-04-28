@@ -87,17 +87,23 @@
       <div class="col-2 offset-1">
         <div class="section__joinus__aoyama">
           <img src="/static/images/image-empty.png" width="100%" alt="">
-          <h5>Aoyama Campus</h5>
-          <p>Every Friday</p>
-          <p>18:30~21:00
+          <div class="activity_location">
+            <h5>Aoyama Campus</h5>
+            <p>Every Friday</p>
+            <p>18:30~21:00
+          </div>
+
         </div>
       </div>
       <div class="col-2">
         <div class="section__joinus__sagamihara">
           <img src="/static/images/image-empty.png" width="100%" alt="">
-          <h5>Sagamihara Camups</h5>
-          <p> Every Monday</p>
-          <p>18:00~21:00</p>
+          <div class="activity_location">
+            <h5>Sagamihara Camups</h5>
+            <p> Every Monday</p>
+            <p>18:00~21:00</p>
+          </div>
+
         </div>
       </div>
     </div>
@@ -132,20 +138,28 @@
     </div>
 
     <div class="section__contact__form col-3 offset-2">
-      <form action="malto: piedpiper.aoyama@gmail.com" method="post" enctype="text/plain">
+      <script type="text/javascript">var submitted = false;</script>
+      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+        onload='if(submitted){window.location="/";}'></iframe>
+      <form
+        action="https://docs.google.com/forms/u/2/d/e/1FAIpQLSffnJlsRa-jdGyiuXWFq5E7eIynA_UZtju5xI4ZD5nBPQS1dQ/formResponse"
+        method="post" target="hidden_iframe" onsubmit="submitted=true;">
         <div class="form-group">
-          <input class="form-control" type="text" size="32" name="name" placeholder="Your Name">
+          <input class="form-control" type="text" size="32" name="entry.1643010595" placeholder="Your Name" required>
         </div>
         <div class="form-group">
-          <input class="form-control" type="email" size="32" name="email" placeholder="Email Address">
+          <input class="form-control" type="email" size="32" name="entry.107522928" placeholder="Email Address"
+            required>
         </div>
         <div class="form-group">
-          <textarea class="form-control" name="comment" rows="7" placeholder="Message"></textarea>
+          <textarea class="form-control" name="entry.890021410" rows="7" placeholder="Message" required></textarea>
         </div>
         <div class="button_wrapper">
           <input type="submit" value="SEND" class="button">
         </div>
       </form>
+
+
     </div>
   </div>
 </div>

@@ -3,11 +3,28 @@ from note import Note
 import pandas as pd
 import re
 import os
+from flask_httpauth import HTTPBasicAuth
+
+
 app = Flask(__name__)
+auth = HTTPBasicAuth()
+
+users = {
+    "admin": "password",
+}
+
+
+@auth.get_password
+def get_pw(username):
+    if username in users:
+        return users.get(username)
+    return None
 
 
 @app.route('/')
+@auth.login_required
 def index():
+    index = "index"
     note = Note()
     df = note.get_deta()
     note_list = df[0:3]
@@ -17,10 +34,11 @@ def index():
         a["body"] = p.sub("", a["body"]).replace("　", "")
         a["publishAt"] = re.sub("-", "/", a["publishAt"])
 
-    return render_template('index.html', note_list=note_list)
+    return render_template('index.html', note_list=note_list, index=index)
 
 
 @app.route('/note')
+@auth.login_required
 def note_list():
     note = Note()
     df = note.get_deta()
@@ -34,20 +52,8 @@ def note_list():
     return render_template('note.html', note_list=note_list,)
 
 
-@app.route('/test')
-def test():
-
-    p = re.compile(r"<[^>]*?>")
-    note = Note()
-    df, df_s = note.get_note()
-    note_list = df
-    for a in note_list:
-        a["body"] = (p.sub("", a["body"]))
-
-    return render_template('test.html', note_list=note_list)
-
-
 @app.route('/note/<id>', methods=['POST', 'GET'])
+@auth.login_required
 def get_note(id):
     note = Note()
     note_body = note.get_note(id)
@@ -56,8 +62,9 @@ def get_note(id):
     publishAt = note_body["publish_at"]
     publishAt = re.sub("-", "/", publishAt)
     eyecatch = note_body["eyecatch"]
+    style = """<style type = "text/css" >.nav-item >a{color:#252525;} .nav-item>a:after{background-color:#252525;} </style>"""
 
-    return render_template('note_body.html', name=name, body=body, publishAt=publishAt, eyecatch=eyecatch)
+    return render_template('note_body.html', name=name, body=body, publishAt=publishAt, eyecatch=eyecatch, style=style)
 
 
 if __name__ == '__main__':

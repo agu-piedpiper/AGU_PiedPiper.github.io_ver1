@@ -13,6 +13,7 @@ body {
     line-height: 1.7;
     color: #ffffff;
     width: 100%;
+    position: relative;
 }
 
 a {
@@ -40,13 +41,70 @@ body::-webkit-scrollbar {
 /*　　　header
 ーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
 
-header {
-    /* background: -webkit-linear-gradient(to right, #00944b, #0061a4);
+/* .fixed-top {
 
-    background: linear-gradient(to right, #00944b, #0061a4); */
-    backdrop-filter: blur(3px);
+} */
+
+.navbar {
+    position: fixed;
+    top: 5%;
+    left: 3%;
     background: none;
-    height: 7vh;
+    font-size: 28px;
+    display: -webkit-flex;
+    display: flex;
+    z-index: 20;
+}
+
+.nav-link {
+    padding: 0;
+}
+
+.aaa, .nav, .nav-item {
+    display: -webkit-flex;
+    display: flex;
+}
+
+.nav-item>a {
+    position: relative;
+    display: inline-block;
+    transition: .3s;
+}
+
+.nav-item>a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 0;
+    height: 1.5px;
+    background-color: #fff;
+    transition: .3s;
+    will-change: transform;
+}
+
+.nav-item>a:hover::after {
+    width: 100%;
+}
+
+.nav-pills .nav-link.active {
+    background-color: transparent;
+}
+
+.nav-pills .nav-link.active::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 1.5px;
+    background-color: #fff;
+    transition: .3s;
+    will-change: transform;
+}
+
+.nav-link-top {
+    font-weight: 600;
 }
 
 .logo-img {
@@ -193,35 +251,6 @@ footer {
 
 .card {
     border: none;
-}
-
-/* note */
-
-.note-list-heading {
-    display: inline-block;
-    position: relative;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    font-size: 4rem;
-    margin-bottom: 2%;
-    margin-top: 1%;
-    font-weight: 600;
-    color: #252525;
-}
-
-.note-list-heading:before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: -12px;
-    display: inline-block;
-    width: 120px;
-    height: 3px;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    background-color: #252525;
-    border-radius: 1px;
 }
 
 /* note-body */
@@ -385,17 +414,14 @@ footer {
     background-color: #252525;
 }
 
-/* .section__joinus__message {
-    background-color: greenyellow;
+.how_to_join {
+    margin-top: 50px;
+    text-align: center;
 }
 
-.section__joinus__aoyama {
-    background-color: greenyellow;
+.how_to_join>p {
+    margin: 0;
 }
-
-.section__joinus__sagamihara {
-    background-color: greenyellow;
-} */
 
 /*　　　Contact
 ーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
@@ -412,4 +438,44 @@ footer {
 
 .contact-body h1 {
     font-weight: 600;
+}
+
+.note-bg {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: #159971;
+    background: -webkit-linear-gradient(to left top, #009245, #00a794);
+    background: linear-gradient(to left top, #009245, #00a794);
+    padding-left: 9%;
+    padding-right: 9%;
+}
+
+/* note */
+
+.note-list-heading {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    font-size: 4rem;
+    margin-bottom: 2%;
+    margin-top: 1%;
+    font-weight: 600;
+    color: #fff;
+}
+
+.note-list-heading:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -12px;
+    display: inline-block;
+    width: 120px;
+    height: 3px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #fff;
+    border-radius: 1px;
 }

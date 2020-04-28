@@ -6,22 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PiedPiper</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="/static/style.css">
 </head>
 
-<body>
-    <header class="navbar navbar-expand-sm fixed-top">
+<body data-spy="scroll" data-target="#aaa" data-offset="20">
+    <nav class="navbar">
         <!-- ヘッダーのタイトル（indexとの結び付） -->
-        <a href="/" class="navbar-brand"><img class="d-inline-block align-top logo-img"
-                src="/static/images/PiedPiper_logo_w.png" alt="PiedPiper"></a>
+        <!-- <a href="/" class="navbar-brand"><img class="d-inline-block align-top logo-img"
+                src="/static/images/PiedPiper_logo_w.png" alt="PiedPiper"></a> -->
         <!-- ヘッダーのメニューバー -->
-        <div>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link " href="#">Top</a></li>
+        <div id="aaa">
+            <ul class="nav nav-pills flex-column ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#top">PiedPiper</a></li>
                 <li class="nav-item"><a class="nav-link " href="#about">About</a></li>
                 <li class="nav-item"><a class="nav-link " href="#activity">Activity</a></li>
                 <li class="nav-item"><a class="nav-link " href="#joinus">Join Us</a></li>
@@ -29,13 +30,22 @@
             </ul>
         </div>
 
-    </header>
+    </nav>
     <!-- ここまでがヘッダー -->
-    <div class="main ">
-    {% block content %}
-    <!-- ここに個別部分が挿入される -->
-    {% endblock %}
+    <div class="container">
+
     </div>
+    <div class="main ">
+        {% block content %}
+        <!-- ここに個別部分が挿入される -->
+        {% endblock %}
+    </div>
+    <footer>
+        <p><small>&copy;2020青山学院大学PiedPiperプログラミング愛好会</small></p>
+        <!-- Noteへ -->
+        <!-- ツイッターへ -->
+    </footer>
+
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>

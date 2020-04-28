@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     note = Note()
-    df = note.get_deta()
+    df, df_s = note.get_deta()
     note_list = df[0:3]
     p = re.compile(r"<[^>]*?>")
     q = re
@@ -22,7 +22,7 @@ def index():
 @app.route('/note')
 def note_list():
     note = Note()
-    df = note.get_deta()
+    df, df_s = note.get_deta()
     note_list = df
     p = re.compile(r"<[^>]*?>")
     q = re
@@ -38,7 +38,7 @@ def test():
 
     p = re.compile(r"<[^>]*?>")
     note = Note()
-    df, df_s = note.get_note()
+    df, df_s = note.get_deta()
     note_list = df
     for a in note_list:
         a["body"] = (p.sub("", a["body"]))
@@ -48,13 +48,15 @@ def test():
 
 @app.route('/note/<id>', methods=['POST', 'GET'])
 def get_note(id):
+    # id= request.args.get('q')
     note = Note()
-    note_body = note.get_note(id)
-    name = note_body["name"]
-    body = note_body["body"]
-    publishAt = note_body["publish_at"]
+    df, df_s = note.get_deta()
+    note_body = df_s.query("id == @id").to_dict()
+    name = list(note_body["name"].values())[0]
+    body = list(note_body["body"].values())[0]
+    publishAt = str(list(note_body["publishAt"].values())[0])
     publishAt = re.sub("-", "/", publishAt)
-    eyecatch = note_body["eyecatch"]
+    eyecatch = list(note_body["eyecatch"].values())[0]
 
     return render_template('note_body.html', name=name, body=body, publishAt=publishAt, eyecatch=eyecatch)
 

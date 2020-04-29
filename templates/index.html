@@ -13,12 +13,12 @@
       </div>
       <!-- TOPの文章 -->
       <div class="section_top__text">
-        <p class="h1 display-3 mt-4 mb-3 top_logo_text">PiedPiper</p>
+        <p class="display-3 mt-4 mb-3 top_logo_text">PiedPiper</p>
         <p class="h5">Aoyama Gakuin University</p>
         <p class="h5">Programming Society</p>
       </div>
     </div>
-    <div class="scroll ">
+    <div class="scroll">
       <a href="#about"><span></span>Scroll</a>
     </div>
   </div>
@@ -57,7 +57,7 @@
               <div class="card-body p-4">
                 <h5 class="card-title">{{note['name']}}<br><span
                     class="small text-muted">{{note['publishAt'][0:10]}}</span></h5>
-                <p class="card-text">{{note.body | truncate(100, True) }}</p>
+                <p class="card-text">{{note.body | truncate(90, True) }}</p>
                 <!-- <br> -->
               </div>
             </a>

@@ -453,7 +453,7 @@ footer p {
 }
 
 .contact-body {
-    padding: 2%;
+    padding: 5%;
 }
 
 .contact-body h1 {
@@ -543,10 +543,14 @@ footer p {
     }
     .scroll {
         height: 60px;
+        bottom: 1%;
     }
     .display-1 {
         font-size: 3.75rem;
         font-weight: 700;
+    }
+    .display-3 {
+        font-size: 4rem !important;
     }
     .about-conteinar {
         text-align: center;
@@ -565,7 +569,7 @@ footer p {
         padding-top: 70px;
     }
     .note-card {
-        height: 465px;
+        height: 445px;
     }
     .section_top__logo>img {
         width: 50%;
@@ -574,6 +578,10 @@ footer p {
         background-image: url("/static/images/bg.png");
         height: 100%;
         width: 100%;
+    }
+    .section {
+        padding-top: 15%;
+        padding-bottom: 10%;
     }
     .h5 {
         font-size: 1.125rem;
@@ -595,7 +603,7 @@ footer p {
     }
     .navbar {
         top: 1%;
-        left: 1%;
+        left: 0%;
     }
     .navbar-toggler {
         border: none;
@@ -616,5 +624,9 @@ footer p {
     .more-button {
         font-size: 16pt;
         padding: 5% 20%;
+    }
+    .note-bg {
+        padding-left: 5%;
+        padding-right: 5%;
     }
 }

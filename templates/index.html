@@ -4,15 +4,15 @@
 
 <!-- セクション1 TOP-->
 
-<div id="top" class="section__top ">
+<div id="top" class="section_top ">
   <div class="bg-img section">
     <!-- セクション1 TOPのロゴ -->
     <div class="top-container">
-      <div class="section__top__logo">
-        <img src="/static/images/logo_w.png" alt="logo" width="30%">
+      <div class="section_top__logo">
+        <img src="/static/images/logo_w.png" alt="logo">
       </div>
       <!-- TOPの文章 -->
-      <div class="section__top__text">
+      <div class="section_top__text">
         <p class="h1 display-3 mt-4 mb-3 top_logo_text">PiedPiper</p>
         <p class="h5">Aoyama Gakuin University</p>
         <p class="h5">Programming Society</p>
@@ -26,106 +26,109 @@
 
 
 <!-- セクション2-ABOUT_PIEDPIPER -->
-<div id="about" class="section__about section">
-  <div class="row">
-    <div class="about-conteinar col-10 offset-2">
-      <h1 class="display-1">PiedPiper</h1>
-      <div class="about__text">
-        <p>青山学院大学プログラミング愛好会です。</p>
-        <p>青学生のテクノロジーへの理解を深め</p>
-        <p>プログラミングの学習及び開発を行っています。</p>
+<div id="about" class="section_about ">
+  <div class="bg-about-img section">
+    <div class="row">
+      <div class="about-conteinar col-12  col-lg-10 offset-lg-2">
+        <h1 class="display-1">PiedPiper</h1>
+        <div class="about_text">
+          <p>青山学院大学プログラミング愛好会です。</p>
+          <p>青学生のテクノロジーへの理解を深め</p>
+          <p>プログラミングの学習及び開発を行っています。</p>
+        </div>
       </div>
     </div>
   </div>
-  <!-- ABOUTの文章 -->
+
 </div>
 
 
 <!-- セクション3 -ACTIVITY-->
-<div id="activity" class="section__activity section">
-  <h1 class="sub-heading">ACTIVIY</h1>
-  <div class="note__api">
-    <div class="row justify-content-center p-5">
-      {% for note in note_list %}
-      <div class="col-xl-3 col-4  px-3">
-        <div class="card mb-4 ">
-          <a href="note/{{note['key']}}" class="note-card">
-            <img class="card-img-top " src="{{note['eyecatch']}}" alt="カードの画像">
-            <div class="card-body p-4">
-              <h5 class="card-title">{{note['name']}}<br><span
-                  class="small text-muted">{{note['publishAt'][0:10]}}</span></h5>
-              <p class="card-text">{{note.body | truncate(100)}}</p>
-              <!-- <br> -->
-            </div>
-          </a>
+<div id="activity" class="section_activity  ">
+  <div class="section">
+    <h1 class="sub-heading">ACTIVIY</h1>
+    <div class="note__api">
+      <div class="row justify-content-center contact-body p-lg-5">
+        {% for note in note_list %}
+        <div class="col-12 col-md-7 col-lg-3 px-lg-3">
+          <div class="card mb-4 ">
+            <a href="note/{{note['key']}}" class="note-card">
+              <img class="card-img-top " src="{{note['eyecatch']}}" alt="カードの画像">
+              <div class="card-body p-4">
+                <h5 class="card-title">{{note['name']}}<br><span
+                    class="small text-muted">{{note['publishAt'][0:10]}}</span></h5>
+                <p class="card-text">{{note.body | truncate(100, True) }}</p>
+                <!-- <br> -->
+              </div>
+            </a>
+          </div>
         </div>
+        {% endfor %}
       </div>
-      {% endfor %}
-    </div>
-    <div class="button_wrapper">
-      <a href="/note" class="more-button">More</a>
+      <div class="button_wrapper">
+        <a href="/note" class="more-button">More</a>
+      </div>
     </div>
   </div>
 </div>
 
 
 <!-- セクション4 -JOIN_US-->
-<div id="joinus" class="section__joinus section">
-  <div class="section__joinus__message ">
-    <h1 class="sub-heading">JOIN US</h1>
-    <div class="row justify-content-center contact-body">
-      <div class="col-3">
-        <p>PiedPiperは</p>
-        <p>初心者歓迎のサークルです</p>
-        <p>エンジニア志望の方は勿論、</p>
-        <p>起業・教育関係のお仕事を目指す方</p>
-        <p>ものづくりが好きな方</p>
-        <p>新しい時代を感じたい方</p>
-        <p>是非一度ご連絡ください</p>
-        <p>お待ちしています。</p>
-      </div>
-      <div class="col-2 offset-1">
-        <div class="section__joinus__aoyama">
-          <img src="/static/images/image-empty.png" width="100%" alt="">
-          <div class="activity_location">
-            <h5>Aoyama Campus</h5>
-            <p>Every Friday</p>
-            <p>18:30~21:00
-          </div>
+<div id="joinus" class="section_joinus ">
+  <div class="section bg-join-img">
+    <div class="section_joinus_message ">
+      <h1 class="sub-heading">JOIN US</h1>
+      <div class="row justify-content-center contact-body">
+        <div class="col-12 col-lg-3 join_text ">
+          <p>PiedPiperは</p>
+          <p>初心者歓迎のサークルです</p>
+          <p>エンジニア志望の方は勿論、</p>
+          <p>起業・教育関係のお仕事を目指す方</p>
+          <p>ものづくりが好きな方</p>
+          <p>新しい時代を感じたい方</p>
+          <p>是非一度ご連絡ください</p>
+          <p>お待ちしています。</p>
+        </div>
+        <div class=" col-12 col-lg-2 offset-lg-1">
+          <div class="section_joinus_aoyama">
+            <img src="/static/images/aoyama.jpg" width="100%" alt="">
+            <div class="activity_location">
+              <h5>Aoyama Campus</h5>
+              <p>Every Friday</p>
+              <p>18:30~21:00
+            </div>
 
+          </div>
+        </div>
+        <div class="col-12 col-lg-2 ">
+          <div class="section_joinus_sagamihara">
+            <img src="/static/images/sagamihara.jpg" width="100%" alt="">
+            <div class="activity_location">
+              <h5>Sagamihara Camups</h5>
+              <p> Every Monday</p>
+              <p>18:00~21:00</p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col-2">
-        <div class="section__joinus__sagamihara">
-          <img src="/static/images/image-empty.png" width="100%" alt="">
-          <div class="activity_location">
-            <h5>Sagamihara Camups</h5>
-            <p> Every Monday</p>
-            <p>18:00~21:00</p>
-          </div>
 
-        </div>
+      <div class="how_to_join">
+        <p>PiedPiper公式LINE、TwitterのDMにて受け付けております。</p>
+        <a href="https://lin.ee/gfGod6A"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加"
+            height="60" border="0"></a>
+        <a href="https://twitter.com/PiedPiper_AGU"><img src="/static/images/Twitter_Logo.png" width="120" alt=""></a>
       </div>
     </div>
-
-    <div class="how_to_join">
-      <p>PiedPiper公式LINE、TwitterのDMにて受け付けております。</p>
-      <a href="https://lin.ee/gfGod6A"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加"
-          height="60" border="0"></a>
-      <a href="https://twitter.com/PiedPiper_AGU"><img src="/static/images/Twitter_Logo.png" width="120" alt=""></a>
-
-    </div>
-
   </div>
 
 </div>
 
 
 <!-- セクション5-CONTACT -->
-<div id="contact" class="section__contact section">
+<div id="contact" class="section_contact section">
   <h1 class="sub-heading">CONTACT</h1>
   <div class="row justify-content-center contact-body">
-    <div class=" col-3 text-left ">
+    <div class="col-12 col-lg-3 text-left mb-4">
       <h1>PiedPiper</h1>
       <p>Aoyama Gakuin University<br>
         Programming Society</p>
@@ -137,7 +140,7 @@
       <!-- <p><a href="#">Facebook</a></p> -->
     </div>
 
-    <div class="section__contact__form col-3 offset-2">
+    <div class="section_contact__form col-12 col-lg-3 offset-lg-2">
       <script type="text/javascript">var submitted = false;</script>
       <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
         onload='if(submitted){window.location="/";}'></iframe>
@@ -145,11 +148,10 @@
         action="https://docs.google.com/forms/u/2/d/e/1FAIpQLSffnJlsRa-jdGyiuXWFq5E7eIynA_UZtju5xI4ZD5nBPQS1dQ/formResponse"
         method="post" target="hidden_iframe" onsubmit="submitted=true;">
         <div class="form-group">
-          <input class="form-control" type="text" size="32" name="entry.1643010595" placeholder="Your Name" required>
+          <input class="form-control" type="text" name="entry.1643010595" placeholder="Your Name" required>
         </div>
         <div class="form-group">
-          <input class="form-control" type="email" size="32" name="entry.107522928" placeholder="Email Address"
-            required>
+          <input class="form-control" type="email" name="entry.107522928" placeholder="Email Address" required>
         </div>
         <div class="form-group">
           <textarea class="form-control" name="entry.890021410" rows="7" placeholder="Message" required></textarea>

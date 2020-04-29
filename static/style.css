@@ -4,16 +4,25 @@
 
 html {
     scroll-behavior: smooth;
-    width: 100vw;
+    width: 100%;
+    /* font-size: 16px; */
 }
 
+/* "Sawarabi Gothic" */
+
+/* 'Open Sans', "a-otf-gothic-bbb-pr6n", */
+
 body {
-    font-family: 'Open Sans', "Sawarabi Gothic", sans-serif;
+    font-family: 'Open Sans', 'a-otf-gothic-bbb-pr6n', sans-serif;
     margin: 0;
     line-height: 1.7;
     color: #ffffff;
     width: 100%;
     position: relative;
+}
+
+p {
+    font-size: 1rem;
 }
 
 a {
@@ -116,26 +125,6 @@ hd-logo>h1 {
     font-size: 160%;
 }
 
-/* .main-nav {
-    display: flex;
-    font-size: 1.25rem;
-    text-transform: uppercase;
-    margin-top: 34px;
-    list-style-type: none;
-}
-
-.main-nav li {
-    margin-left: 36px;
-}
-
-.main-nav a {
-    color: #fff;
-}
-
-.main-nav a:hover {
-    color: #00bbdd;
-} */
-
 .page-header {
     display: flex;
     justify-content: space-between;
@@ -154,7 +143,7 @@ hd-logo>h1 {
     font-size: 16pt;
     text-align: center;
     cursor: pointer;
-    padding: 14px 84px;
+    padding: 5% 20%;
     background: -webkit-linear-gradient(to right, #22b573, #00a99d);
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #22b573, #00a99d);
@@ -180,7 +169,7 @@ hd-logo>h1 {
     font-size: 25pt;
     text-align: center;
     cursor: pointer;
-    padding: 20px 120px;
+    padding: 1% 6%;
     background: -webkit-linear-gradient(to right, #22b573, #00a99d);
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #22b573, #00a99d);
@@ -202,7 +191,7 @@ hd-logo>h1 {
 ーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
 
 footer {
-    background-color: #252525;
+    background-color: #191919;
     text-align: center;
     height: 10vh;
     color: white;
@@ -234,7 +223,7 @@ footer p {
     left: 50%;
     bottom: -12px;
     display: inline-block;
-    width: 120px;
+    width: 80%;
     height: 3px;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
@@ -243,7 +232,6 @@ footer p {
 }
 
 .section {
-    height: 100vh;
     padding: 5%;
     scroll-snap-align: start;
 }
@@ -265,7 +253,7 @@ footer p {
 }
 
 .note-content {
-    color: #252525;
+    color: #191919;
 }
 
 .note-title h1 {
@@ -300,8 +288,12 @@ footer p {
     width: 100%;
 }
 
-.section__top__logo {
+.section_top__logo {
     text-align: center;
+}
+
+.section_top__logo>img {
+    width: 30%;
 }
 
 .top-container {
@@ -312,7 +304,7 @@ footer p {
     -webkit-transform: translateY(-50%) translateX(-50%);
 }
 
-.section__top__text {
+.section_top__text {
     text-align: center;
 }
 
@@ -359,19 +351,27 @@ footer p {
 ーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
 
 #about {
-    background-color: #252525;
+    background-color: #191919;
     display: block;
+    height: 100vh;
+    width: 100%;
 }
+
+/* .bg-about-img {
+    background-image: url("/static/images/bg-about.png");
+    height: 100%;
+    width: 100%;
+} */
 
 .about__text {
     padding-top: 1%;
     padding-right: 23%;
-    font-size: 1rem;
+    font-size: 1.6rem;
     margin-left: 1.5%;
 }
 
 .display-1 {
-    font-size: 120px;
+    font-size: 7.5rem;
     font-weight: 700;
 }
 
@@ -387,6 +387,7 @@ footer p {
     background: #159971;
     background: -webkit-linear-gradient(to left top, #009245, #00a794);
     background: linear-gradient(to left top, #009245, #00a794);
+    height: 100vh;
 }
 
 .act__title__span {
@@ -395,12 +396,12 @@ footer p {
 
 .note-card {
     box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
-    color: #000;
+    color: #191919;
     height: 450px;
 }
 
 .note-card:link, .note-card:visited, .note-card:active {
-    color: #000;
+    color: #191919;
     text-decoration: none;
 }
 
@@ -415,8 +416,15 @@ footer p {
 ーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
 
 #joinus {
-    background-color: #252525;
+    background-color: #191919;
+    height: 100vh;
 }
+
+/* .bg-join-img {
+    background-image: url("/static/images/bg-join.png");
+    height: 100%;
+    width: 100%;
+} */
 
 .activity_location {
     margin-top: 5px;
@@ -427,7 +435,7 @@ footer p {
 }
 
 .how_to_join {
-    margin-top: 50px;
+    margin-top: 100px;
     text-align: center;
 }
 
@@ -463,6 +471,10 @@ footer p {
     padding-right: 9%;
 }
 
+.form-group>input {
+    height: 30px;
+}
+
 /* note */
 
 .note-list-heading {
@@ -493,6 +505,116 @@ footer p {
 }
 
 .note-body a {
-    color: #252525;
+    color: #191919;
     text-decoration: underline;
+}
+
+.bg-bk {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.6;
+    z-index: 10;
+}
+
+.blur {
+    filter: blur(5px);
+}
+
+.c-w {
+    color: #fff !important;
+}
+
+.bg-w {
+    background-color: #fff !important;
+}
+
+.navbar-icon-w {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")!important;
+}
+
+@media screen and (max-width:575px) {
+    /*　画面サイズが480px以下の場合ここの記述が適用される　*/
+    p, .scroll>a {
+        font-size: 0.94rem;
+    }
+    .scroll {
+        height: 60px;
+    }
+    .display-1 {
+        font-size: 3.75rem;
+        font-weight: 700;
+    }
+    .about-conteinar {
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .about_text {
+        padding: 0;
+        margin-top: 30px;
+        margin-left: 0px;
+    }
+    .section_about, .section_activity, .section_joinus, .section_contact {
+        height: 100% !important;
+    }
+    .note-list, .note-content {
+        padding-top: 70px;
+    }
+    .note-card {
+        height: 465px;
+    }
+    .section_top__logo>img {
+        width: 50%;
+    }
+    .bg-img {
+        background-image: url("/static/images/bg.png");
+        height: 100%;
+        width: 100%;
+    }
+    .h5 {
+        font-size: 1.125rem;
+    }
+    h5 {
+        font-size: 1.5rem;
+    }
+    .sub-heading {
+        margin-top: 10px;
+    }
+    .contact-body {
+        margin-top: 30px;
+    }
+    .section_joinus_aoyama, .section_joinus_sagamihara {
+        margin-top: 15px;
+    }
+    .small {
+        font-size: 0.75rem;
+    }
+    .navbar {
+        top: 1%;
+        left: 1%;
+    }
+    .navbar-toggler {
+        border: none;
+    }
+    .navbar-toggler .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        height: 40px !important;
+        width: 40px !important;
+    }
+    .join_text {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .how_to_join {
+        margin-top: 50px;
+    }
+    .more-button {
+        font-size: 16pt;
+        padding: 5% 20%;
+    }
 }

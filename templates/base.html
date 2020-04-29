@@ -9,25 +9,42 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'xae3zpm',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="/static/style.css">
 </head>
 
-<body data-spy="scroll" data-target="#nav" data-offset="20">
-    <nav class="navbar">
+<body data-spy="scroll" data-target="#Navbar" data-offset="20">
+    <nav class="navbar navbar-expand-sm">
         <!-- ヘッダーのタイトル（indexとの結び付） -->
         <!-- <a href="/" class="navbar-brand"><img class="d-inline-block align-top logo-img"
                 src="/static/images/PiedPiper_logo_w.png" alt="PiedPiper"></a> -->
         <!-- ヘッダーのメニューバー -->
-        <div id="nav">
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navbar" aria-controls="Navbar"
+            aria-expanded="false" aria-label="ナビゲーションの切替">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="Navbar" class="collapse navbar-collapse ml-3">
             <ul class="nav nav-pills flex-column ml-auto">
                 {% if index %}
                 <li class="nav-item"><a class="nav-link" href="#top">PiedPiper</a></li>
-                <li class="nav-item"><a class="nav-link " href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link " href="#activity">Activity</a></li>
-                <li class="nav-item"><a class="nav-link " href="#joinus">Join Us</a></li>
-                <li class="nav-item"><a class="nav-link " href="#contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#activity">Activity</a></li>
+                <li class="nav-item"><a class="nav-link" href="#joinus">Join Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 {%else%}
                 <li class="nav-item"><a class="nav-link" href="/#top">PiedPiper</a></li>
                 <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
@@ -43,13 +60,14 @@
 
     </nav>
     <!-- ここまでがヘッダー -->
-    <div class="container">
+    <div class="main" id="main">
 
-    </div>
-    <div class="main ">
+
         {% block content %}
         <!-- ここに個別部分が挿入される -->
         {% endblock %}
+    </div>
+    <div id="bg-bk">
     </div>
     <footer>
         <p class="small">&copy;2020青山学院大学PiedPiperプログラミング愛好会</p>
@@ -66,6 +84,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/static/script.js"></script>
 </body>
 
 </html>

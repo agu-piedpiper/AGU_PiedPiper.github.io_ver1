@@ -30,9 +30,9 @@ def index():
     note_list = df[0:3]
     p = re.compile(r"<[^>]*?>")
     q = re
-    for a in note_list:
-        a["body"] = p.sub("", a["body"]).replace("　", "")
-        a["publishAt"] = re.sub("-", "/", a["publishAt"])
+    for note in note_list:
+        note["body"] = note["body"].replace("　", "").replace("\n", "")
+        note["publishAt"] = re.sub("-", "/", note["publishAt"])
 
     return render_template('index.html', note_list=note_list, index=index)
 
@@ -45,9 +45,9 @@ def note_list():
     note_list = df
     p = re.compile(r"<[^>]*?>")
     q = re
-    for a in note_list:
-        a["body"] = p.sub("", a["body"]).replace("　", "")
-        a["publishAt"] = re.sub("-", "/", a["publishAt"])
+    for note in note_list:
+        note["body"] = note["body"].replace("　", "").replace("\n", "")
+        note["publishAt"] = re.sub("-", "/", note["publishAt"])
 
     return render_template('note.html', note_list=note_list,)
 
@@ -62,8 +62,13 @@ def get_note(id):
     publishAt = note_body["publish_at"]
     publishAt = re.sub("-", "/", publishAt)
     eyecatch = note_body["eyecatch"]
-    style = """<style type = "text/css" >.nav-item >a{color:#252525;} .nav-item>a:after{background-color:#252525;} </style>"""
+    style = """ <style type = "text/css" >.navbar-toggler>.navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");}
+        .nav-item >a{color:#191919;} .nav-item>a:after{background-color:#191919;}
 
+        </style>"""
+    #
+# @media screen and (max-width:575px) {.nav-item >a{color:#fff;} .nav-item>a:after{background-color:#fff;}}
     return render_template('note_body.html', name=name, body=body, publishAt=publishAt, eyecatch=eyecatch, style=style)
 
 

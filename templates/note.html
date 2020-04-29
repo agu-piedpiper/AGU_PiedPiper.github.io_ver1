@@ -1,18 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="note-bg">
-    <div class="note-list p-5">
+    <div class="note-list p-lg-5">
         <h1 class="note-list-heading mb-5">ACTIVIY</h1>
-        <div class="row p-5">
+        <div class="row p-lg-5 mt-3">
             {% for note in note_list %}
-            <div class="col-xl-3 col-4  px-2">
+            <div class="col-12 col-lg-3 px-lg-2">
                 <div class="card mb-4 ">
                     <a href="note/{{note['key']}}" class="note-card">
                         <img class="card-img-top" src="{{note['eyecatch']}}" alt="カードの画像">
                         <div class="card-body p-4">
                             <h5 class="card-title">{{note['name']}}<br><span
                                     class="small text-muted">{{note['publishAt'][0:10]}}</span></h5>
-                            <p class="card-text">{{note.body | truncate(100)}}</p>
+                            <p class="card-text">{{note.body | truncate(100, True) }}</p>
                             <!-- <br> -->
                         </div>
                     </a>

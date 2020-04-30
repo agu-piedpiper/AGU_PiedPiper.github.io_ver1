@@ -44,6 +44,7 @@ body::-webkit-scrollbar {
 }
 
 .main {
+    transition: all 0.5s ease-out;
     scroll-snap-type: y mandatory;
 }
 
@@ -509,6 +510,10 @@ footer p {
     text-decoration: underline;
 }
 
+.bg-n {
+    transition: all 0.5s ease-out;
+}
+
 .bg-bk {
     position: absolute;
     top: 0px;
@@ -516,8 +521,9 @@ footer p {
     width: 100%;
     height: 100%;
     background-color: #000;
-    opacity: 0.6;
+    opacity: 0.7;
     z-index: 10;
+    /* transition: all 0.5s ease-out; */
 }
 
 .blur {
@@ -569,7 +575,10 @@ footer p {
         padding-top: 70px;
     }
     .note-card {
-        height: 445px;
+        height: 420px;
+    }
+    .note-title>h1 {
+        font-size: 1.8rem;
     }
     .section_top__logo>img {
         width: 50%;
@@ -586,7 +595,7 @@ footer p {
     .h5 {
         font-size: 1.125rem;
     }
-    h5 {
+    .activity_location>h5 {
         font-size: 1.5rem;
     }
     .sub-heading {
@@ -602,11 +611,21 @@ footer p {
         font-size: 0.75rem;
     }
     .navbar {
-        top: 1%;
+        padding: 5px;
+        top: 0%;
         left: 0%;
+        width: 100%;
+        height: 48px;
+        backdrop-filter: blur(120px);
+        /* background-color: rgba(0, 0, 0, 0.1) */
     }
     .navbar-toggler {
+        padding: 0rem 0.75rem;
+        margin: 0 0 0 auto;
         border: none;
+    }
+    .nav-link {
+        margin: 0 0 0 auto;
     }
     .navbar-toggler .navbar-toggler-icon {
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");

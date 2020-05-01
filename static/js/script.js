@@ -22,4 +22,13 @@ $(".section_top__logo>img").click(function () {
 $(".section_top__logo>img").on("animationend", function () {
   $(this).removeClass("animated jello");
 });
+$(function () {
+  if (window.matchMedia("(max-width: 575px)").matches) {
+    $("[ data-wow-delay]").attr("data-wow-delay", "0.3s");
+
+    $(".section_top_text>.display-3").attr("data-wow-delay", "0.8s");
+    $(".section_top_text>.h5").attr("data-wow-delay", "1.1s");
+  }
+});
+
 // .nav-item >a{color:#fff;} .nav-item>a:after{background-color:#fff;}

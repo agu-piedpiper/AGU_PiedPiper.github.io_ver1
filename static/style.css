@@ -694,10 +694,10 @@ footer p {
         display: inline-block;
     }
     .about_img_1, .about_img_3 {
-        transform: translate(-10%, 0%) scale(1);
+        transform: translate(-10%, 0%);
     }
     .about_img_2, .about_img_4 {
-        transform: translate(10%, 0%) scale(1);
+        transform: translate(10%, 0%);
     }
 }
 

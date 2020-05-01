@@ -588,7 +588,7 @@ footer p {
     .about-conteinar {
         text-align: center;
         margin-top: 30px;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
     }
     .about_text {
         padding: 0;
@@ -686,16 +686,16 @@ footer p {
         text-align: center;
     }
     .about_imgs>div>img {
+        float: none;
+        position: static;
         margin-left: 0px;
-        margin-bottom: -120px;
+        margin-bottom: -8px;
         display: inline-block;
     }
     .about_img_1, .about_img_3 {
-        position: relative;
-        transform: translate(-17.5%, 0%) scale(0.7);
+        transform: translate(-10%, 0%) scale(1);
     }
     .about_img_2, .about_img_4 {
-        position: relative;
-        transform: translate(17.5%, 0%) scale(0.7);
+        transform: translate(10%, 0%) scale(1);
     }
 }

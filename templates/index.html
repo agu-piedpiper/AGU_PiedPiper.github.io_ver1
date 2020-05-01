@@ -8,14 +8,14 @@
   <div class="bg-img section">
     <!-- セクション1 TOPのロゴ -->
     <div class="top-container">
-      <div class="section_top__logo">
+      <div class="section_top__logo wow fadeInUp" data-wow-delay="0.3s">
         <img src="/static/images/logo_w.png" alt="logo">
       </div>
       <!-- TOPの文章 -->
       <div class="section_top__text">
-        <p class="display-3 mt-4 mb-3 top_logo_text">PiedPiper</p>
-        <p class="h5">Aoyama Gakuin University</p>
-        <p class="h5">Programming Society</p>
+        <p class="display-3 mt-4 mb-3 top_logo_text wow fadeInUp" data-wow-delay="0.8s">PiedPiper</p>
+        <p class="h5 wow fadeInUp" data-wow-delay="1s">Aoyama Gakuin University</p>
+        <p class="h5 wow fadeInUp" data-wow-delay="1s">Programming Society</p>
       </div>
     </div>
     <div class="scroll">
@@ -30,17 +30,20 @@
   <div class="bg-about-img section">
     <div class="row ">
       <div class="about-conteinar col-12  col-lg-10 offset-lg-1">
-        <h1 class="display-1">PiedPiper</h1>
-        <div class="about_text">
+        <h1 class="display-1 wow fadeInUp" data-wow-delay="0.1s">PiedPiper</h1>
+        <div class="about_text wow fadeInUp" data-wow-delay="0.3s">
           <p>青山学院大学プログラミング愛好会です。</p>
           <p>青学生のテクノロジーへの理解を深め</p>
           <p>プログラミングの学習及び開発を行っています。</p>
         </div>
         <div class="about_imgs">
-          <div class="about_imgs_span1"><img class="about_img_1" src="/static/images/about_1.png" alt=""><img
-              class="about_img_2" src="/static/images/about_2.png" alt=""></div>
-          <div class="about_imgs_span2"><img class="about_img_3" src="/static/images/about_3.png" alt=""><img
-              class="about_img_4" src="/static/images/about_4.png" alt=""></div>
+          <div class="about_imgs_span1"><img class="about_img_1 wow fadeInUp-l" src="/static/images/about_1.svg"
+              alt=""><img class="about_img_2 wow fadeInUp-r" data-wow-delay="0.3s" src="/static/images/about_2.svg"
+              alt="">
+          </div>
+          <div class="about_imgs_span2"><img class="about_img_3 wow fadeInUp-l" data-wow-delay="0.6s"
+              src="/static/images/about_3.svg" alt=""><img class="about_img_4 wow fadeInUp-r" data-wow-delay="0.9s"
+              src="/static/images/about_4.svg" alt=""></div>
         </div>
       </div>
     </div>
@@ -56,11 +59,11 @@
     <div class="note__api">
       <div class="row justify-content-center contact-body p-lg-5">
         {% for note in note_list %}
-        <div class="col-12 col-md-7 col-lg-3 px-lg-3">
+        <div class="col-12 col-md-7 col-lg-3 px-lg-3  wow fadeInUp" data-wow-delay="{{ 0.3*loop.index }}s">
           <div class="card mb-4 ">
             <a href="note/{{note['key']}}" class="note-card">
               <img class="card-img-top " src="{{note['eyecatch']}}" alt="カードの画像">
-              <div class="card-body p-4">
+              <div class="card-body p-4 ">
                 <h5 class="card-title">{{note['name']}}<br><span
                     class="small text-muted">{{note['publishAt'][0:10]}}</span></h5>
                 <p class="card-text">{{note.body | truncate(90, True) }}</p>
@@ -85,7 +88,7 @@
     <div class="section_joinus_message ">
       <h1 class="sub-heading">JOIN US</h1>
       <div class="row justify-content-center contact-body">
-        <div class="col-12 col-lg-3 join_text ">
+        <div class="col-12 col-lg-3 join_text wow fadeInUp" data-wow-delay="0.1s">
           <p>PiedPiperは</p>
           <p>初心者歓迎のサークルです</p>
           <p>エンジニア志望の方は勿論、</p>
@@ -96,9 +99,9 @@
           <p>お待ちしています。</p>
         </div>
         <div class=" col-12 col-lg-2 offset-lg-1">
-          <div class="section_joinus_aoyama">
+          <div class="section_joinus_aoyama wow fadeInUp" data-wow-delay="0.3s">
             <img src="/static/images/aoyama.jpg" width="100%" alt="">
-            <div class="activity_location">
+            <div class="activity_location ">
               <h5>Aoyama Campus</h5>
               <p>Every Friday</p>
               <p>18:30~21:00
@@ -107,7 +110,7 @@
           </div>
         </div>
         <div class="col-12 col-lg-2 ">
-          <div class="section_joinus_sagamihara">
+          <div class="section_joinus_sagamihara wow fadeInUp" data-wow-delay="0.3s">
             <img src="/static/images/sagamihara.jpg" width="100%" alt="">
             <div class="activity_location">
               <h5>Sagamihara Camups</h5>
@@ -118,7 +121,7 @@
         </div>
       </div>
 
-      <div class="how_to_join">
+      <div class="how_to_join wow fadeInUp" data-wow-delay="0.6s">
         <p>PiedPiper公式LINE、TwitterのDMにて受け付けております。</p>
         <a href="https://lin.ee/gfGod6A"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加"
             height="60" border="0"></a>

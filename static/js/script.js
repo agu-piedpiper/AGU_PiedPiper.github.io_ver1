@@ -15,4 +15,11 @@ $(document).click(function () {
   } else {
   }
 });
+
+$(".section_top__logo>img").click(function () {
+  $(this).addClass("animated jello");
+});
+$(".section_top__logo>img").on("animationend", function () {
+  $(this).removeClass("animated jello");
+});
 // .nav-item >a{color:#fff;} .nav-item>a:after{background-color:#fff;}

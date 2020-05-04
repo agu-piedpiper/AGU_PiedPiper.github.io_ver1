@@ -41,21 +41,31 @@
         <div id="Navbar" class="collapse navbar-collapse mr-3">
             <ul class="nav nav-pills flex-column ml-auto">
                 {% if index %}
-                <li class="nav-item"><a class="nav-link" href="#top">PiedPiper</a></li>
+                <li class="nav-item"><a class="nav-link" href="#top">Top</a></li>
                 <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="#activity">Activity</a></li>
                 <li class="nav-item"><a class="nav-link" href="#joinus">Join Us</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 {%else%}
-                <li class="nav-item"><a class="nav-link" href="/#top">PiedPiper</a></li>
+                <li class="nav-item"><a class="nav-link" href="/#top">Top</a></li>
                 <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="/#activity">Activity</a></li>
                 <li class="nav-item"><a class="nav-link" href="/#joinus">Join Us</a></li>
                 <li class="nav-item"><a class="nav-link" href="/#contact">Contact</a></li>
                 {{ style | safe }}
                 {% endif %}
-
-
+                <li class="nav-item">
+                    <div class="nav-sns">
+                        <a href="https://note.com/piedpiper_aoyama"><img src="static\images\logo\note.png"
+                                alt="note"></a>
+                        <a href="https://twitter.com/PiedPiper_AGU"><img src="static\images\logo\twitter.png"
+                                alt="twitter"></a>
+                        <a href="https://note.com/piedpiper_aoyama"><img src="static\images\logo\facebook.png"
+                                alt="note"></a>
+                        <a href="https://www.instagram.com/piedpiper_aoyama/"><img
+                                src="static\images\logo\instagram.png" alt="note"></a>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -71,9 +81,9 @@
     <div id="bg-bk" class="bg-n">
     </div>
     <footer>
+
         <p class="small">&copy;2020青山学院大学PiedPiperプログラミング愛好会</p>
-        <!-- Noteへ -->
-        <!-- ツイッターへ -->
+
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

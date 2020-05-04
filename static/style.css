@@ -192,6 +192,7 @@ hd-logo>h1 {
 ーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
 
 footer {
+    position: relative;
     background-color: #191919;
     text-align: center;
     height: 10vh;
@@ -322,8 +323,8 @@ footer p {
 .scroll {
     position: absolute;
     display: inline-block;
-    height: 84px;
-    bottom: 5px;
+    height: 60px;
+    bottom: 0px;
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
     -webkit-transform: translateY(-50%) translateX(-50%);
@@ -332,20 +333,35 @@ footer p {
 .scroll>a {
     padding-top: 30px;
     text-decoration: none;
+    font-size: 0.9rem;
 }
 
 .scroll>a>span {
     position: absolute;
-    bottom: 0;
+    bottom: 70px;
     left: 50%;
     width: 24px;
     height: 24px;
     margin-left: -12px;
-    border-left: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    /* -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg); */
     box-sizing: border-box;
+    animation: arrow 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0s infinite alternate;
+}
+
+@keyframes arrow {
+    0% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0) rotate(-45deg);
+        transform: translate3d(0, 0, 0) rotate(-45deg);
+    }
+    100% {
+        opacity: 0.6;
+        -webkit-transform: translate3d(0, -8px, 0) rotate(-45deg);
+        transform: translate3d(0, -8px, 0) rotate(-45deg);
+    }
 }
 
 /*　　　About
@@ -472,6 +488,12 @@ footer p {
     margin: 0;
 }
 
+.how_to_join:hover {}
+
+.how_to_join img {
+    margin: 15px;
+}
+
 /*　　　Contact
 ーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
 
@@ -568,6 +590,35 @@ footer p {
 
 .navbar-icon-w {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")!important;
+}
+
+/* sns */
+
+.nav-sns {
+    display: none;
+}
+
+.sns {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.sns img {
+    height: 38px;
+    padding-right: 14px;
+}
+
+.nav-sns img {
+    height: 32px;
+    padding-left: 12px;
+}
+
+@media screen and (max-width:575px) {
+    .nav-sns {
+        margin: 20px 0 0 auto;
+        display: inline-block;
+        /* border-top: double 2px #fff; */
+    }
 }
 
 @media screen and (max-width:575px) {

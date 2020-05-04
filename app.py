@@ -65,7 +65,7 @@ def get_note(id):
     style = """ <style type = "text/css" >.navbar-toggler>.navbar-toggler-icon {
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(25,25,25,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");}
         .nav-item >a{color:#191919;} .nav-item>a:after{background-color:#191919;}
-@media screen and (max-width:575px) {.nav-item >a{color:#fff;} .nav-item>a:after{background-color:#fff;}}
+        @media screen and (max-width:575px) {.nav-item >a{color:#fff;} .nav-item>a:after{background-color:#fff;}}
         </style>"""
     #
 #

@@ -30,13 +30,19 @@
   <div class="bg-about-img section">
     <div class="row ">
       <div class="about-conteinar col-12  col-lg-10 offset-lg-1">
-        <h1 class="display-1 wow fadeInUp" data-wow-delay="0.1s">PiedPiper</h1>
+        <div class="about_piedpier_lg wow fadeInUp" data-wow-delay="0.1s">
+          <p class="display-1">P<span>ied</span></p>
+          <p class="display-1">P<span>iper</span></p>
+        </div>
+        <div class="about_piedpier wow fadeInUp" data-wow-delay="0.1s">
+          <p class="display-1">PiedPiper</p>
+        </div>
         <div class="about_text wow fadeInUp" data-wow-delay="0.3s">
           <p>青山学院大学公認のプログラミング愛好会です</p>
           <p>青学生のテクノロジーへの理解を深めるために</p>
           <p>プログラミングの学習および開発を行っています</p>
         </div>
-        <div class="about_imgs">
+        <!-- <div class="about_imgs">
           <div class="about_imgs_span1"><img class="about_img_1 wow fadeInUp-l" src="/static/images/about_1.svg"
               alt=""><img class="about_img_2 wow fadeInUp-r" data-wow-delay="0.3s" src="/static/images/about_2.svg"
               alt="">
@@ -44,6 +50,22 @@
           <div class="about_imgs_span2"><img class="about_img_3 wow fadeInUp-l" data-wow-delay="0.6s"
               src="/static/images/about_3.svg" alt=""><img class="about_img_4 wow fadeInUp-r" data-wow-delay="0.9s"
               src="/static/images/about_4.svg" alt=""></div>
+        </div> -->
+        <!-- 案2 -->
+        <!-- <div class="about_imgs">
+          <img class="about_img_1 wow fadeInUp-l" src="/static/images/about_1.svg" alt="">
+          <img class="about_img_2 wow fadeInUp-r" data-wow-delay="0.3s" src="/static/images/about_2.svg" alt="">
+          <img class="about_img_3 wow fadeInUp-l" data-wow-delay="0.6s" src="/static/images/about_3.svg" alt="">
+        </div> -->
+
+        <!-- 案3 -->
+        <div class="about_imgs">
+          <div class="about_imgs_span1"><img class="about_img_1 wow fadeInUp-l" src="/static/images/about_1.svg"
+              alt=""><img class="about_img_2 wow fadeInUp-r" data-wow-delay="0.3s" src="/static/images/about_2.svg"
+              alt="">
+          </div>
+          <div class="about_imgs_span2"><img class="about_img_3 wow fadeInUp-l" data-wow-delay="0.6s"
+              src="/static/images/about_3.svg" alt=""></div>
         </div>
       </div>
     </div>
@@ -55,7 +77,7 @@
 <!-- セクション3 -ACTIVITY-->
 <div id="activity" class="section_activity  ">
   <div class="section">
-    <h1 class="sub-heading">NOTE</h1>
+    <h1 class="sub-heading">ACTIVITY</h1>
     <div class="note__api">
       <div class="row justify-content-center contact-body p-lg-5">
         {% for note in note_list %}
@@ -97,7 +119,7 @@
           <p>新しい時代を感じたい方など</p>
           <p>ぜひ活動にお越しください</p>
         </div>
-        <div class=" col-12 col-lg-2 offset-lg-1">
+        <div class=" col-12 col-lg-3 ">
           <div class="section_joinus_aoyama wow fadeInUp" data-wow-delay="0.3s">
             <img src="/static/images/aoyama.jpg" width="100%" alt="">
             <div class="activity_location ">
@@ -108,7 +130,7 @@
 
           </div>
         </div>
-        <div class="col-12 col-lg-2 ">
+        <div class="col-12 col-lg-3 ">
           <div class="section_joinus_sagamihara wow fadeInUp" data-wow-delay="0.3s">
             <img src="/static/images/sagamihara.jpg" width="100%" alt="">
             <div class="activity_location">
@@ -121,10 +143,14 @@
       </div>
 
       <div class="how_to_join wow fadeInUp" data-wow-delay="0.6s">
-        <p>PiedPiper公式LINE、TwitterのDMにて受け付けております。</p>
-        <a href="https://lin.ee/gfGod6A"><img src="static\images\logo\line.png" alt="友だち追加" height="60"></a>
+        <!-- <a href="https://lin.ee/gfGod6A"><img src="static\images\logo\line.png" alt="友だち追加" height="60"></a>
         <a href="https://twitter.com/PiedPiper_AGU"><img src="static\images\logo\twitter_blue.png" height="60"
-            alt="twitter"></a>
+            alt="twitter"></a> -->
+        <a href="https://lin.ee/gfGod6A"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/en.png"
+            alt="Add friend" height="60" border="0"></a>
+        <a href="https://twitter.com/PiedPiper_AGU" class="twitter_btn">
+          <img src="static\images\twtter_btn2.png" alt="@PiedPiper_AGU" height="60"></a>
+        <p>PiedPiper公式LINE、TwitterのDMにて受け付けております。</p>
       </div>
     </div>
   </div>
@@ -146,7 +172,9 @@
       <p><a href="https://lin.ee/gfGod6A">LINE</a></p> -->
       <!-- <p><a href="#">Instagram</a></p> -->
       <!-- <p><a href="#">Facebook</a></p> -->
+
       <div class="sns">
+        <p>FOLLOW US</p>
         <a href="https://note.com/piedpiper_aoyama"><img src="static\images\logo\note.png" alt="note"></a>
         <a href="https://twitter.com/PiedPiper_AGU"><img src="static\images\logo\twitter.png" alt="twitter"></a>
         <a href="https://note.com/piedpiper_aoyama"><img src="static\images\logo\facebook.png" alt="note"></a>

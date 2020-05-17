@@ -216,7 +216,7 @@ footer p {
     font-size: 4rem;
     margin-bottom: 2%;
     margin-top: 0%;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .sub-heading:before {
@@ -374,31 +374,36 @@ footer p {
     width: 100%;
 }
 
-/* .bg-about-img {
-    background-image: url("/static/images/bg-about.png");
-    height: 100%;
-    width: 100%;
-} */
-
-.about_text {
-    display: inline-block;
-}
-
-/* .about_text>p {
-
-} */
-
-.display-1 {
-    font-size: 7.5rem;
-    font-weight: 700;
-}
-
 .about-conteinar {
     padding-left: 5%;
     padding-top: 2%;
 }
 
-.about_imgs {
+.about_text {
+    display: inline-block;
+    margin-top: 110px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+.display-1 {
+    font-size: 14rem;
+    font-weight: 700;
+    line-height: 11rem;
+    margin-bottom: 0;
+    letter-spacing: -0.02em;
+}
+
+.display-1>span {
+    color: #191919;
+    text-shadow: 1px 1px 0 #FFF, -1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px -1px 0 #FFF, 0px 1px 0 #FFF, 0-1px 0 #FFF, -1px 0 0 #FFF, 1px 0 0 #FFF;
+}
+
+.about_piedpier {
+    display: none;
+}
+
+/* .about_imgs {
     transform: scale(0.95);
     position: relative;
     min-width: 100%;
@@ -412,10 +417,56 @@ footer p {
 
 .about_imgs_span2 {
     position: absolute;
-    top: 283.1px;
+    top: 283.1px; */
+
+/* 260px+23.1px(20*2/√3 1.73) */
+
+/* left: -160px; */
+
+/* -150-10(20/2) */
+
+/* }
+
+.about_imgs>div>img {
+    float: left;
+    display: block;
+    margin-left: 20px;
+    width: 300px;
+} */
+
+/* 案2 */
+
+/* .about_imgs {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.about_imgs>img {
+    margin-left: 30px;
+    width: 300px;
+} */
+
+/* 案3 */
+
+.about_imgs {
+    transform: scale(1);
+    position: relative;
+    min-width: 100%;
+    top: -35%;
+    right: -35%;
+}
+
+.about_imgs_span1 {
+    position: absolute;
+}
+
+.about_imgs_span2 {
+    position: absolute;
+    top: -283.1px;
     /* 260px+23.1px(20*2/√3 1.73) */
-    left: -160px;
-    /* -150-10(20/2) */
+    left: 470px;
+    /* 300*1.5+20 */
 }
 
 .about_imgs>div>img {
@@ -487,8 +538,6 @@ footer p {
 .how_to_join>p {
     margin: 0;
 }
-
-.how_to_join:hover {}
 
 .how_to_join img {
     margin: 15px;
@@ -631,8 +680,17 @@ footer p {
         bottom: 1%;
     }
     .display-1 {
-        font-size: 3.75rem;
+        font-size: 4rem;
         font-weight: 700;
+        line-height: normal;
+        margin-bottom: 20px;
+        letter-spacing: normal;
+    }
+    .about_piedpier {
+        display: inline;
+    }
+    .about_piedpier_lg {
+        display: none;
     }
     .display-3 {
         font-size: 4rem !important;

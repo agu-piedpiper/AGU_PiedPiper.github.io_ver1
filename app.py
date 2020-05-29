@@ -22,6 +22,7 @@ def get_pw(username):
 
 
 @app.route('/')
+# @auth.login_required
 def index():
     index = "index"
     note = Note()
@@ -37,6 +38,7 @@ def index():
 
 
 @app.route('/note')
+# @auth.login_required
 def note_list():
     note = Note()
     df = note.get_deta()
@@ -51,6 +53,7 @@ def note_list():
 
 
 @app.route('/note/<id>', methods=['POST', 'GET'])
+# @auth.login_required
 def get_note(id):
     note = Note()
     note_body = note.get_note(id)
